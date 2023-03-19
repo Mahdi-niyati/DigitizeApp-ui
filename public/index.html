@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./build/tailwind.css">
     <title>Digitize App - shop</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="bg-gray-100">
     <!-- app bar -->
@@ -41,17 +42,35 @@
     <!-- product section -->
     <div class="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <div class="bg-white rounded-xl p-2 shadow-md">
-            <div class="mb-5">image</div>
+            <div class="mb-3 bg-gray-100 rounded-xl p-2">
+                <img src="/assets/images/apple-watch-7.png" alt="">
+            </div>
             <!-- product desc. -->
-            <div  class="flex items-center justify-between w-full mb-4">
-                <span class="text-slate-200 text-sm">اپل</span>
-                <div>circles</div>
+            <div  class="flex items-center justify-between w-full mb-3">
+                <span class="text-slate-200 text-sm md:text-base">اپل</span>
+                <div x-data="{ color: 'red' }" class="flex items-center ">
+                    <div @click="color = 'red' " :class="color === 'red' && 'ring-1 ring-red-400' " class=" w-6 h-6 sm:h-8 sm:w-8 flex items-center justify-center rounded-full cursor-pointer bg-red-400 border-2 border-white">
+                        <svg x-show="color === 'red' " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5 stroke-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                          </svg>                          
+                    </div>
+                    <div @click="color = 'blue' " :class="color === 'blue' && 'ring-1 ring-blue-400' "  class="w-6 h-6 sm:h-8 sm:w-8 flex items-center justify-center rounded-full cursor-pointer bg-blue-400 border-2 border-white -mr-1.5">
+                        <svg x-show="color === 'blue' " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5 stroke-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                          </svg>
+                    </div>
+                    <div @click="color = 'green' " :class="color === 'green' && 'ring-1 ring-green-400' "  class="w-6 h-6 sm:h-8 sm:w-8 flex items-center justify-center rounded-full cursor-pointer bg-green-400 border-2 border-white -mr-1.5">
+                        <svg x-show="color === 'green' " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5 stroke-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                          </svg>
+                    </div>
+                </div>
             </div>
             <!-- product title -->
-            <div class="text-slate-800 text-xs font-bold mb-2">ساعت هوشمند اپل سری ۶</div>
+            <div class="text-slate-800 text-xs font-bold mb-2 md:text-base">ساعت هوشمند اپل سری ۶</div>
             <div class="text-orange-600 font-medium text-center text-sm mb-3">۱۲,۱۵۰,۰۰۰تومان</div>
             <hr>
-            <button class="w-full font-bold text-orange-600 py-1">مشاهده و سفارش</button>
+            <button class="w-full font-bold text-orange-600 py-1 md:text-lg">مشاهده و سفارش</button>
         </div>
         <div class="bg-blue-100">2</div>
         <div class="bg-blue-100">3</div>
@@ -63,5 +82,7 @@
         <div class="bg-blue-100">9</div>
         <div class="bg-blue-100">10</div>
     </div>
+    
+    
 </body>
 </html>

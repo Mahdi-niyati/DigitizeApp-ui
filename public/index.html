@@ -39,9 +39,31 @@
             <span class=" text-sm text-slate-800 mr-3">فیلتر : اپل</span>
         </div>
     </div>
+    <!-- content -->
     <div class=" grid grid-cols-12 md:grid-rows-[55px_minmax(500px,_1fr)] md:gap-8">
         <!-- sidbar -->
-        <div class="bg-white hidden md:block p-4 col-span-4 lg:col-span-3 row-span-2">sidbar</div>
+        <div class="hidden md:block  col-span-4 lg:col-span-3 row-span-2">
+            <div class=" bg-white p-5 rounded-xl">
+                <div class=" text-xl font-bold text-orange-500 mb-5 ">دسته بندی </div>
+                <ul>
+                    <li class="flex items-center">
+                        <span class=" relative w-5 h-5 rounded-full bg-gray-100 text-slate-800">
+                            <svg class="w-4 h-5 absolute top-1.5 right-1 " stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.625h-3" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M7 13.825A1.163 1.163 0 1 0 7 11.5a1.163 1.163 0 0 0 0 2.325Z" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                        </span>
+                        <span class="mr-2">گوشی موبایل</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span>گوشی موبایل</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span>گوشی موبایل</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <!-- sort section -->
         <div class=" hidden md:block  col-span-8 lg:col-span-9">
             <div x-data= "{sort : 1 , activeClass: 'text-slate-800 font-bold'}" class="bg-white px-4 flex items-center gap-x-4 text-gray-400 rounded-lg">

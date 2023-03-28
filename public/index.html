@@ -91,9 +91,9 @@
                 <div class="">
                     <div class=" text-xl font-bold text-orange-500 mb-5 ">فیلتر</div>
                     <!-- ACC. no. 1 -->
-                    <div class="">
+                    <div x-data="{isOpenBrand: true}" class="">
                         <!-- ACC #1 header -->
-                        <div class="mb-4 flex items-center justify-between w-full py-2 hover:bg-gray-50 rounded-lg p-2 cursor-pointer">
+                        <div @click="isOpenBrand = !isOpenBrand"  class="mb-4 flex items-center justify-between w-full py-2 hover:bg-gray-50 rounded-lg p-2 cursor-pointer">
                             <div class="flex items-center px-2">
                                 <svg width="20" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="10.5" cy="9.5" r="9.5" fill="#AFAFAF" fill-opacity=".29" />
@@ -109,9 +109,9 @@
                               </svg>
                         </div>
                         <!-- ACC #1 Content -->
-                        <div class=" px-2 flex flex-col gap-y-2">
+                        <div x-show="isOpenBrand === true" class=" px-2 flex flex-col gap-y-2">
                             <label for="apple" class="py-1 flex items-center cursor-pointer">
-                                <input type="checkbox" name="bran" id="apple">
+                                <input type="checkbox" name="bran" id="apple"  class="form-checkbox rounded">
                                 <span class="mr-2">اپل</span>
                             </label>
                             <label for="xiaumi" class="py-1 flex items-center cursor-pointer">
